@@ -20,7 +20,7 @@ const NavBar = () => {
           className="nav-logo"
           src={Logo}
           alt="logo"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/out-africa")}
         />
         <div className="nav-content" ref={navRef}>
           <div className="nav-item" data-after="Products">

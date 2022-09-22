@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Intro from "../intro/intro";
 import WaitList from "../waitlist/waitlist";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Out Africa";
+  }, []);
+
   return (
     <div>
       <Intro />
