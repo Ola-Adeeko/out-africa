@@ -1,5 +1,7 @@
 @import url("general-sans.css");
-
+body {
+  background: #fffcf8;
+}
 .App {
   font-family: "General Sans", sans-serif;
   box-sizing: border-box;
