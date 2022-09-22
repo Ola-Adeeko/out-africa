@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/out-africa/static/css/main.e99aeda6.css",
-    "main.js": "/out-africa/static/js/main.9379edae.js",
+    "main.js": "/out-africa/static/js/main.8e63e665.js",
     "static/media/guy2.png": "/out-africa/static/media/guy2.384cb5252893f65e71a1.png",
     "static/media/GeneralSans-VariableItalic.ttf": "/out-africa/static/media/GeneralSans-VariableItalic.37a2c9e4ec944dec5059.ttf",
     "static/media/GeneralSans-Variable.ttf": "/out-africa/static/media/GeneralSans-Variable.d7facbbe2ed9ae4aae49.ttf",
@@ -47,10 +47,10 @@
     "static/media/GeneralSans-Extralight.woff2": "/out-africa/static/media/GeneralSans-Extralight.d6a4332df60f058537bf.woff2",
     "index.html": "/out-africa/index.html",
     "main.e99aeda6.css.map": "/out-africa/static/css/main.e99aeda6.css.map",
-    "main.9379edae.js.map": "/out-africa/static/js/main.9379edae.js.map"
+    "main.8e63e665.js.map": "/out-africa/static/js/main.8e63e665.js.map"
   },
   "entrypoints": [
     "static/css/main.e99aeda6.css",
-    "static/js/main.9379edae.js"
+    "static/js/main.8e63e665.js"
   ]
 }
