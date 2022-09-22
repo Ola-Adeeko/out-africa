@@ -1,0 +1,41 @@
+.float-div {
+    width: 15.563rem;
+    height: 4.375rem;
+    display: flex;
+    background: rgba(255,255,255, .9);
+    padding: 0.625rem  1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    
+}
+.float-img {
+     margin-right: 0.625rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+   
+}
+.float-img > img {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: white;
+    border-radius: 100%;
+    object-fit: cover;
+    
+}
+
+.float-content {
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.float-content > :nth-child(1) {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.float-content > :nth-child(2) {
+    font-size: 0.75rem;
+    font-weight: 300;
+}

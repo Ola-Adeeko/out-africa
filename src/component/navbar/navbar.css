@@ -1,0 +1,146 @@
+.navbar {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: #fffcf8;
+  z-index: 5;
+}
+.bar {
+  max-width: 1212px;
+  margin: auto 150px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 110px;
+}
+.bar .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f0f0f;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .bar .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .bar .nav-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #ffe8c3;
+    transition: all ease-in-out 1s;
+    transform: translateY(-100%);
+  }
+
+  .bar .responsive_nav {
+    transform: none;
+  }
+
+  .bar .nav-close-btn {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+  }
+  .bar {
+    justify-content: space-between;
+  }
+  .nav-item {
+    font-weight: 500;
+    font-size: 22px;
+    --c: #df7430; /* the color */
+    padding: 10px 20px;
+    color: #0000;
+    background: linear-gradient(90deg, #fff 50%, var(--c) 0)
+        calc(100% - var(--_p, 0%)) / 200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) 100% no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+    letter-spacing: 2px;
+  }
+  .nav-item:hover {
+    --_p: 100%;
+    color: #fff;
+  }
+}
+
+.nav-logo {
+  transform: scale(1);
+  cursor: pointer;
+}
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.nav-item {
+  cursor: pointer;
+  color: #0f0f0f;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media (max-width: 75em) {
+  /* For Tab-land  75em= 1200px/16px */
+  html {
+    /* font-size: 56.25%; */
+  }
+  .navbar {
+    width: 1200px;
+  }
+  .bar {
+    margin: auto 50px;
+  }
+}
+@media (max-width: 56.25em) {
+  /* For Tab-port  56.25em= 900px/16px */
+  html {
+    /* font-size: 50%; */
+  }
+  .navbar {
+    width: 900px;
+  }
+} /* 1rem = 8px; 8px/16 = 50% */
+
+@media (max-width: 37.5em) {
+  /* For phone 37.5em= 600px/16px */
+  html {
+    /* font-size: 31.25%; */
+  }
+  .navbar {
+    width: 600px;
+  }
+  .bar {
+    margin: auto 20px;
+    gap: 110px;
+  }
+}
+/* 1rem = 4px; 5px/16 = 31.25% */
+
+@media (min-width: 112.5em) {
+  /* For big-desktop 112.5em= 1800px/16px */
+  html {
+    font-size: 75%;
+  }
+} /* 1rem = 12px; 12px/16 = 75% */

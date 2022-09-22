@@ -1,0 +1,35 @@
+.button {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fae9cd;
+  background: #df7430;
+  width: 14.24rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  background: black;
+}
+.button-disabled {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fae9cd;
+  background: #df7430;
+  width: 14.24rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+  background: #dadde7;
+}
+.inverted {
+  font-weight: 400;
+  font-size: 1rem;
+  background: #fae9cd;
+  color: #df7430;
+  width: 14.24rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+}

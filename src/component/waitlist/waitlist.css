@@ -1,0 +1,146 @@
+.list {
+  margin-top: 120px;
+  padding: 80px 150px 100px 150px;
+  color: #0f0f0f;
+}
+.list-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.list-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 62.4px;
+  max-width: 697px;
+}
+.list-btn {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 00px;
+}
+.list-lower {
+  margin-top: 4.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.list-lower > :last-child > .card-link {
+  color: #bdbdbd;
+}
+.list-lower > :last-child > .card-link > span {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+@media (max-width: 75em) {
+  /* For Tab-land  75em= 1200px/16px */
+  html {
+    /* font-size: 56.25%; */
+  }
+  .list {
+    margin-top: 50px;
+    padding: 40px 50px;
+    height: 650px;
+  }
+  .line-break {
+    display: none;
+  }
+  .list-lower {
+    margin-top: 0rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 56.25em) {
+  /* For Tab-port  56.25em= 900px/16px */
+  html {
+    /* font-size: 50%; */
+  }
+  .list {
+    height: fit-content;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .list-top {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .list-text {
+    margin: auto;
+    justify-content: center;
+    max-width: fit-content;
+  }
+  .list-btn {
+    justify-content: center;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .list-text {
+    display: block;
+  }
+  .line-break {
+    display: none;
+  }
+  .list-lower {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+  .list-lower > img {
+    display: none;
+  }
+} /* 1rem = 8px; 8px/16 = 50% */
+
+@media (max-width: 37.5em) {
+  /* For phone 37.5em= 600px/16px */
+  html {
+    /* font-size: 31.25%; */
+  }
+
+  .list {
+    height: fit-content;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .list-top {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .list-btn {
+    justify-content: flex-start;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .list-text {
+    display: block;
+  }
+  .line-break {
+    display: none;
+  }
+  .list-lower {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+}
+/* 1rem = 4px; 5px/16 = 31.25% */
+
+@media (min-width: 112.5em) {
+  /* For big-desktop 112.5em= 1800px/16px */
+  html {
+    font-size: 75%;
+  }
+} /* 1rem = 12px; 12px/16 = 75% */

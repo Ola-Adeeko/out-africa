@@ -1,0 +1,96 @@
+.footer {
+  padding: 76px 150px 41px 150px;
+  display: flex;
+  justify-content: space-between;
+  color: #5e5e5e;
+}
+.footer > * {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+.footer-logo {
+  flex: 1.1;
+}
+.footer-logo > :first-child {
+  margin-right: 42px;
+  font-weight: 700;
+  font-size: 24px;
+}
+.footer-talk {
+  flex: 1;
+  cursor: pointer;
+  justify-content: center;
+}
+.footer-talk > img {
+  margin-right: 12px;
+}
+
+.footer-list {
+  flex: 1;
+  justify-content: flex-end;
+}
+.footer-list > ul {
+  list-style: none;
+  display: flex;
+
+  gap: 50px;
+}
+.footer-list > ul > li {
+  cursor: pointer;
+}
+
+@media (max-width: 75em) {
+  /* For Tab-land  75em= 1200px/16px */
+  html {
+    /* font-size: 56.25%; */
+  }
+  .footer {
+    padding: 40px 40px;
+  }
+}
+@media (max-width: 56.25em) {
+  /* For Tab-port  56.25em= 900px/16px */
+  html {
+    /* font-size: 50%; */
+  }
+  .footer {
+    padding: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+/* 1rem = 8px; 8px/16 = 50% */
+
+@media (max-width: 37.5em) {
+  /* For phone 37.5em= 600px/16px */
+  html {
+    /* font-size: 31.25%; */
+  }
+  .footer {
+    padding: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-logo > :first-child {
+    transform: scale(0.7);
+  }
+}
+/* 1rem = 4px; 5px/16 = 31.25% */
+
+@media (min-width: 112.5em) {
+  /* For big-desktop 112.5em= 1800px/16px */
+  html {
+    font-size: 75%;
+  }
+  .intro {
+    background: red;
+  }
+} /* 1rem = 12px; 12px/16 = 75% */
