@@ -31,8 +31,11 @@ input {
 .form-input input:focus {
   outline: none;
 }
+.d-input {
+  padding-right: 40px;
+}
 
-.form-input span {
+.form-input .f-label {
   position: absolute;
   top: 25px;
   left: 20px;
@@ -43,9 +46,20 @@ input {
   transition: all 0.15s ease-in-out;
   pointer-events: none;
 }
-
-.form-input input:focus ~ span,
-.form-input input:valid ~ span {
+.form-input figure {
+  position: absolute;
+  top: -7px;
+  right: -25px;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #8f98a9;
+  transition: all 0.15s ease-in-out;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+.form-input input:focus ~ .f-label,
+.form-input input:valid ~ .f-label {
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -53,4 +67,35 @@ input {
   background: #fffcf8;
   padding: 5px;
   transform: translate(0px, -40px);
+}
+
+.form-input .dropdown {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  height: fit-content;
+  position: absolute;
+  top: -180px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #8f98a9;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #f0f0f0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dropdown .dropdown-item {
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-item:hover {
+  background: #999;
+  color: #f0f0f0;
 }

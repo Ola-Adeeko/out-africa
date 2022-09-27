@@ -5,7 +5,7 @@ import CustomButton from "../button/button";
 
 const Success = () => {
   useEffect(() => {
-    document.title = "Out Africa";
+    document.title = "Out Africa | Success";
   }, []);
   return (
     <div className="success-page">

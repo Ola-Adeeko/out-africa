@@ -4,7 +4,7 @@ import WaitList from "../waitlist/waitlist";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Out Africa";
+    document.title = "Out Africa | Home";
   }, []);
 
   return (

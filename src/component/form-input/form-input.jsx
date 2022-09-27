@@ -1,8 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { BsAsterisk } from "react-icons/bs";
+import { MdKeyboardArrowUp } from "react-icons/md";
 import "./form-input.css";
 
-const FormInput = ({ handleChange, label, error, ...otherProps }) => (
+export const FormInput = ({ handleChange, label, error, ...otherProps }) => (
   <div className="form-input">
     <input
       className="f-input"
@@ -17,4 +19,65 @@ const FormInput = ({ handleChange, label, error, ...otherProps }) => (
   </div>
 );
 
-export default FormInput;
+export const FormDropdownInput = ({
+  handleChange,
+  handledropchange,
+  label,
+  error,
+  ...otherProps
+}) => {
+  const [show, setShow] = useState(false);
+
+  const closePop = () => {
+    setShow(false);
+  };
+
+  return (
+    <div className="form-input">
+      <input
+        className="f-input d-input"
+        onChange={handleChange}
+        {...otherProps}
+        required
+      />
+      <figure onClick={() => setShow(!show)}>
+        <MdKeyboardArrowUp />
+      </figure>
+      <span className="f-label">{label}</span>
+      <div className={error ? "error-star" : "close"}>
+        <BsAsterisk />
+      </div>
+      {show && (
+        <div className="dropdown">
+          <div
+            className="dropdown-item"
+            onClick={() => {
+              handledropchange("Technology");
+              closePop();
+            }}
+          >
+            <span>Fashion</span>
+          </div>
+          <div
+            className="dropdown-item"
+            onClick={() => {
+              handledropchange("Fashion");
+              closePop();
+            }}
+          >
+            <span>Technology</span>
+          </div>
+          <div
+            className="dropdown-item"
+            onClick={() => {
+              handledropchange("Food");
+              closePop();
+            }}
+          >
+            <span>Food</span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
