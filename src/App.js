@@ -16,7 +16,6 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/register/success" element={<Success />} />
       </Routes>
-
       <Footer />
     </div>
   );

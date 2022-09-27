@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { BsAsterisk } from "react-icons/bs";
-import { MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import "./form-input.css";
 
 export const FormInput = ({ handleChange, label, error, ...otherProps }) => (
@@ -41,7 +41,7 @@ export const FormDropdownInput = ({
         required
       />
       <figure onClick={() => setShow(!show)}>
-        <MdKeyboardArrowUp />
+        {show ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
       </figure>
       <span className="f-label">{label}</span>
       <div className={error ? "error-star" : "close"}>
