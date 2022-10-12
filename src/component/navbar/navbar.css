@@ -103,44 +103,17 @@
 
 @media (max-width: 75em) {
   /* For Tab-land  75em= 1200px/16px */
-  html {
-    /* font-size: 56.25%; */
-  }
-  .navbar {
-    width: 1200px;
-  }
+
   .bar {
     margin: auto 50px;
   }
 }
-@media (max-width: 56.25em) {
-  /* For Tab-port  56.25em= 900px/16px */
-  html {
-    /* font-size: 50%; */
-  }
-  .navbar {
-    width: 900px;
-  }
-} /* 1rem = 8px; 8px/16 = 50% */
 
 @media (max-width: 37.5em) {
   /* For phone 37.5em= 600px/16px */
-  html {
-    /* font-size: 31.25%; */
-  }
-  .navbar {
-    width: 600px;
-  }
+
   .bar {
-    margin: auto 20px;
-    gap: 110px;
+    margin: auto 1rem;
+    /* gap: 110px; */
   }
 }
-/* 1rem = 4px; 5px/16 = 31.25% */
-
-@media (min-width: 112.5em) {
-  /* For big-desktop 112.5em= 1800px/16px */
-  html {
-    font-size: 75%;
-  }
-} /* 1rem = 12px; 12px/16 = 75% */
