@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 63.75em) {
   /* For Tab-port  56.25em= 900px/16px */
   .card {
     padding: 3rem 6rem;
