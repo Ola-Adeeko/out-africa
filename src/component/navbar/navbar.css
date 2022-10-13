@@ -31,6 +31,9 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .navbar {
+    height: 75px;
+  }
   .bar .nav-btn {
     visibility: visible;
     opacity: 1;
@@ -58,8 +61,8 @@
 
   .bar .nav-close-btn {
     position: absolute;
-    top: 3rem;
-    right: 2rem;
+    top: 1rem;
+    right: 3rem;
   }
   .bar {
     justify-content: space-between;
@@ -115,5 +118,10 @@
   .bar {
     margin: auto 1rem;
     /* gap: 110px; */
+  }
+  .bar .nav-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
   }
 }
