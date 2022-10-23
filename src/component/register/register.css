@@ -79,17 +79,29 @@
   height: 74px;
 }
 
+.error-message {
+  display: block;
+  width: 100%;
+  color: rgb(195, 48, 48);
+  font-size: 14px;
+  text-align: center;
+}
+.close {
+  display: none;
+}
+
 @media (max-width: 75em) {
   /* For Tab-land  75em= 1200px/16px */
 
   .reg-page {
-    margin-top: 200px;
     margin-bottom: 150px;
   }
 }
 @media (max-width: 56.25em) {
   /* For Tab-port  56.25em= 900px/16px */
-
+  .reg-page {
+    margin-top: 75px;
+  }
   .reg-container {
     margin-top: 30px;
   }
@@ -105,5 +117,6 @@
   }
   .r-form button {
     width: 90vw;
+    height: 3rem;
   }
 }

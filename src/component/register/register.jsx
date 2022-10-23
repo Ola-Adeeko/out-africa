@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { FormDropdownInput, FormInput } from "../form-input/form-input";
 import CustomButton from "../button/button";
 import "./register.css";
@@ -21,6 +22,8 @@ const Register = () => {
   const [businessPhoneError, setBusinessPhoneError] = useState(false);
   const [businessContactError, setBusinessContactError] = useState(false);
   const [businessIndustryError, setBusinessIndustryError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage2, setErrorMessage2] = useState("");
 
   const [form, setForm] = useState(1);
 
@@ -77,13 +80,22 @@ const Register = () => {
     });
 
     if (isValid) {
-      console.log(name);
-      console.log(email);
-      console.log(phone);
-      setName("");
-      setEmail("");
-      setPhone("");
-      navigate("/register/success");
+      axios
+        .post("http://outafricahq.com/waitlist/students", {
+          full_name: name,
+          email: email,
+          phone: phone,
+        })
+        .then((response) => {
+          console.log("Success");
+          setEmail("");
+          setName("");
+          setPhone("");
+          navigate("/register/success");
+        })
+        .catch((error) => {
+          setErrorMessage(error.response.data.message);
+        });
     }
   };
 
@@ -105,15 +117,26 @@ const Register = () => {
     });
 
     if (isValid) {
-      console.log(businessName);
-      console.log(businessEmail);
-      console.log(businessPhone);
-      setBusinessName("");
-      setBusinessEmail("");
-      setBusinessPhone("");
-      setBusinessContact("");
-      setBusinessIndustry("");
-      navigate("/register/success");
+      axios
+        .post("http://outafricahq.com/waitlist/brands", {
+          business_name: businessName,
+          email: businessEmail,
+          phone: businessPhone,
+          contact_name: businessContact,
+          industry: businessIndustry,
+        })
+        .then((response) => {
+          console.log("Success");
+          setBusinessName("");
+          setBusinessEmail("");
+          setBusinessPhone("");
+          setBusinessContact("");
+          setBusinessIndustry("");
+          navigate("/register/success");
+        })
+        .catch((error) => {
+          setErrorMessage2(error.response.data.message);
+        });
     }
   };
 
@@ -263,8 +286,13 @@ const Register = () => {
               value={phone}
               handleChange={handleChange}
               error={phoneError}
-              type="tel"
+              type="text"
             />
+            <div
+              className={errorMessage.length > 1 ? "error-message" : "close"}
+            >
+              {errorMessage}
+            </div>
             <CustomButton type="submit" disabled={!isActive}>
               Join the waitlist
             </CustomButton>
@@ -291,7 +319,7 @@ const Register = () => {
               value={businessPhone}
               handleChange={handleChange}
               error={businessPhoneError}
-              type="tel"
+              type="text"
             />
             <FormInput
               label="Name of Contact person"
@@ -308,6 +336,11 @@ const Register = () => {
               handledropchange={handleDropChange}
               error={businessIndustryError}
             />
+            <div
+              className={errorMessage2.length > 1 ? "error-message" : "close"}
+            >
+              {errorMessage2}
+            </div>
 
             <CustomButton type="submit" disabled={!isEnabled}>
               Join the waitlist

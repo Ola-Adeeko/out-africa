@@ -33,3 +33,20 @@
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 37.5em) {
+  /* For phone 37.5em= 600px/16px */
+  .button {
+    width: 14.24rem;
+    height: 3rem;
+  }
+
+  .button-disabled {
+    width: 14.24rem;
+    height: 3rem;
+  }
+  .inverted {
+    width: 14.24rem;
+    height: 3rem;
+  }
+}

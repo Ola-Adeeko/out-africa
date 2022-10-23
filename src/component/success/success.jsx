@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import SuccessLogo from "../../assets/success.png";
 import "./success.css";
 import CustomButton from "../button/button";
+import { useNavigate } from "react-router";
 
 const Success = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "Out Africa | Success";
   }, []);
@@ -21,7 +24,9 @@ const Success = () => {
             what we have in store.
           </span>
           <div className="s-btn">
-            <CustomButton>Join our Slack channel</CustomButton>
+            <CustomButton onClick={() => navigate("/out-africa")}>
+              Home
+            </CustomButton>
           </div>
         </div>
       </div>

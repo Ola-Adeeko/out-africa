@@ -93,6 +93,7 @@
   .intro {
     display: block;
     text-align: center;
+    margin-top: 75px;
   }
   .intro-box {
     max-width: 50rem;

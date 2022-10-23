@@ -21,6 +21,9 @@
   max-height: 17.912rem;
   max-width: 18.254rem;
 }
+.s-btn {
+  margin-top: 3rem;
+}
 
 @keyframes animation {
   0% {
@@ -68,6 +71,13 @@
 
   .success-page {
     margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 56.25em) {
+  /* For Tab-port  56.25em= 900px/16px */
+  .success-page {
+    margin-top: 7.625rem;
   }
 }
 
